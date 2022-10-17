@@ -52,36 +52,52 @@ Answers:
 
 
 */
-let sync = require('readline-sync');
+// let sync = require('readline-sync');
 
-let number = Number(sync.question('Please enter an integer greater than zero: '));
-//console.log(typeof number);
+// let number = Number(sync.question('Please enter an integer greater than zero: '));
+// //console.log(typeof number);
 
-let operation = Number(sync.question('For Additon enter 1\nFor Multiplication Enter 2: '))
-//console.log(typeof operation);
+// let operation = Number(sync.question('For Additon enter 1\nFor Multiplication Enter 2: '))
+// //console.log(typeof operation);
 
 
-function productOfSum(integer, operation) {
-  let results;
-  let numberArray = [];
+// function productOfSum(integer, operation) {
+//   let results;
+//   let numberArray = [];
 
-  for (let count = 1; count <= integer; count += 1) {
-    numberArray.push(count);
-  }
+//   for (let count = 1; count <= integer; count += 1) {
+//     numberArray.push(count);
+//   }
   
-  if (operation === 1) {
-    results = numberArray.reduce((acc, cv) => {
-      return acc += cv
-    } ,0)
-  } else if (operation === 2) {
-    results = numberArray.reduce((acc, cv) => { 
-      return acc *= cv
-    } ,1)
-  } else {
-    results = "Please enter 1 for addition or\n2 for multiplication"
-  }
+//   if (operation === 1) {
+//     results = numberArray.reduce((acc, cv) => {
+//       return acc += cv
+//     } ,0)
+//   } else if (operation === 2) {
+//     results = numberArray.reduce((acc, cv) => { 
+//       return acc *= cv
+//     } ,1)
+//   } else {
+//     results = "Please enter 1 for addition or\n2 for multiplication"
+//   }
   
-  return results
+//   return results
+// }
+
+// console.log(productOfSum(number, operation))
+
+let sumTotal = 0; 
+
+for (let count = 1; count <= 5; count += 1) {
+  sumTotal += count
 }
 
-console.log(productOfSum(number, operation))
+
+
+let productTotal = 1; 
+for(let count = 1; count <= 5; count += 1) {
+  productTotal *= count
+}
+
+console.log(sumTotal);
+console.log(productTotal);

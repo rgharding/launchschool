@@ -81,5 +81,44 @@ function sixthNumber() {
 }
 
 
-console.log(sixthNumber());
+// console.log(sixthNumber());
 
+
+function findGreater() {
+  const sync = require('readline-sync');
+  let numArray = [];
+  let lastNum;
+  let criteriaMetArr = [];
+  let criteriaMetNumbers = ""
+  let result = ''
+
+  while (numArray.length < 5) {
+    let number = sync.question('Enter a number: ');
+    numArray.push(number);
+  }
+
+  lastNum = sync.question('Enter last number: ');
+
+
+  for (let i = 0; i < numArray.length; i += 1)
+    if (numArray[i] > 25) {
+      criteriaMetArr.push(numArray[i]);
+    }
+
+
+   if (criteriaMetArr.length > 0) {
+    criteriaMetArr.forEach(number => {
+      criteriaMetNumbers += number + ','
+    })
+  }
+
+  if (criteriaMetArr.length <= 0) {
+    result = `No numbers meet the criteria`
+  } else {
+    result = `The following numbers " ${criteriaMetNumbers} " meet the criteria!`
+  }
+
+  return result;
+}
+
+console.log(findGreater())

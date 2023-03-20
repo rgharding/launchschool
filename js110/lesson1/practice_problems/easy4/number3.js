@@ -53,7 +53,7 @@ Answers:
 
 */
 
-function isPali(string) {
+function isPalin(string) {
   let regex = /[a-zA-Z0-9]/ig
   let charArray = [];
   let revString;
@@ -74,9 +74,9 @@ function isPali(string) {
     }
 }
 
-console.log(isPali('madam')) // true
-console.log(isPali('Madam')) //  true
-console.log(isPali("Madam, I'm Adam")) // true
-console.log(isPali('356653')) // true
-console.log(isPali('356a653')) // true
-console.log(isPali('123ab321')) // false//
+console.log(isPalin('madam')) // true
+console.log(isPalin('Madam')) //  true
+console.log(isPalin("Madam, I'm Adam")) // true
+console.log(isPalin('356653')) // true
+console.log(isPalin('356a653')) // true
+console.log(isPalin('123ab321')) // false//

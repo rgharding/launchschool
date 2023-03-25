@@ -1,0 +1,5 @@
+let str = 'Captain Ruby'
+
+str.replace('ruby, 'JavaScript');
+
+console.log(str);

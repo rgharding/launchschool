@@ -1,36 +1,58 @@
 const sync = require('readline-sync');
 
-console.log('Welcome to Calculator!');    
+function prompt(message) {
+    console.log(`=> ${message}`);
+}
 
-console.log('Enter first number: ');
-let num1 = Number(sync.question());
+function invalidNum(num) {
+  return (num === '') || Number.isNaN(Number(num)) ;
+}
 
 
-console.log('Enter second number: ');
-let num2 = Number(sync.question());
+prompt('Welcome to Calculator');
 
-console.log(`Select operation: \n1) Add: \n2) Subtract: \n3) Multiply: \n4) Divide: `);
-let operation = Number(sync.question());
+prompt('Enter first number: ');
+let num1 = sync.question();
+
+while(invalidNum(num1)) {
+  prompt('Enter Valid Number')
+  num1 = sync.question();
+}
+
+prompt('Enter second number: ');
+let num2 = (sync.question());
+
+while(invalidNum(num2)) {
+  prompt('Enter Valid Number')
+  num2 = sync.question();
+}
+
+prompt(`Select operation: \n1) Add: \n2) Subtract: \n3) Multiply: \n4) Divide: `);
+let operation = sync.question();
+
+while(invalidNum(operation)) {
+  prompt('Enter Valid Number')
+  operation = sync.question();
+}
 
 let result;
-
 switch(operation) {
-  case 1:
-    result = num1 + num2;
+  case '1':
+    result = Number(num1) + Number(num2);
     break;
 
   case 2: 
-    result = num1 - num2;
+    result = Number(num1) - Number(num2);
     break;
     
   case 3: 
-    result = num1 * num2;
+    result = Number(num1) * Number(num2);
     break;
     
   case 4: 
-    result = num1 / num2; 
+    result = Number(num1) / Number(num2); 
     break; 
 }
 
 
-console.log(`The result is ${result}`);
+prompt(`The result is ${result}`);

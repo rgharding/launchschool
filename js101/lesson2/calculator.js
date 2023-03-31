@@ -1,4 +1,5 @@
 const sync = require('readline-sync');
+const sayThis = require('./messages_calc.json')
 
 function prompt(message) {
     console.log(`=> ${message}`);
@@ -9,7 +10,9 @@ function invalidNum(num) {
 }
 
 
-prompt('Welcome to Calculator');
+prompt(sayThis["es"]["welcome"]);
+
+while(true) {
 
 prompt('Enter first number: ');
 let num1 = sync.question();
@@ -56,3 +59,16 @@ switch(operation) {
 
 
 prompt(`The result is ${result}`);
+
+prompt(`Would you like to continue?\nYes: 1 \nNo: 2`)
+let again = sync.question()
+
+while(invalidNum(again)) {
+  prompt(`If YES enter: 1\n If NO enter: 2`);
+  again = sync.question();
+}
+
+  if (again === '2') {
+    break;
+  }
+}

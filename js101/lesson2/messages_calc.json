@@ -1,0 +1,10 @@
+{
+  "en": {
+    "welcome":"Welcome to Calculator",
+    "firstNumber":"Please enter First Number: "
+  },
+
+  "es": {
+    "welcome": "Bienvenido a la calculadora!"
+  }
+}

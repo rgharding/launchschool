@@ -1,3 +1,4 @@
+//This is a conversion from metric to english
 let length = prompt('length of room')
 let width = prompt('width of room')
 

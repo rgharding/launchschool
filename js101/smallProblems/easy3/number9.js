@@ -7,7 +7,7 @@ I/O string => string
 
 ("---what's my +*& line?");    // " what s my line "
 
-I/O looks good... 
+I/O looks good.
 
 [M]ental Model Intermission
 -get string => compare it to regex, remove desired parts, return string

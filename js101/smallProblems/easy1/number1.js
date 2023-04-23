@@ -1,5 +1,8 @@
-let isOdd = (num) => num % 2 !== 0 ? true : false;
+let isOdd1 = (num) => num % 2 !== 0 ? true : false;
 
+function isOdd(num) {
+  return Math.abs(num) % 2 !== 0
+}
 
 console.log(isOdd(2)); // => false
 console.log(isOdd(5)); // => true

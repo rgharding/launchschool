@@ -6,3 +6,6 @@ function filter(input) {
 let arr1 = [1, 2, 3];
 
 console.log(filter(arr1));
+
+
+console.log(Array.isArray(arr1));

@@ -15,3 +15,5 @@ let personObj = {
 }
 
 console.log(greetings(personArr, personObj));
+
+

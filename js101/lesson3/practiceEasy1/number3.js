@@ -1,20 +1,15 @@
+// Does ages contain Spot
 let ages = { Herman: 32, Lily: 30, Grandpa: 402, Eddie: 10 };
 
-function hasName(nameToSearch) {
-	let nameFound = false
-  	for (let name in ages) {
-    	if (name === nameToSearch) {
-      	nameFound = true;
-      }
-    }
-  
-  return nameFound;
+let isSpot = ages.hasOwnProperty('Spot');
+
+function findSpot () {
+  let result;
+  for (key in ages) {
+    result = key === 'Spot' ? true : false;
+ }
+ return result;
 }
 
-console.log(hasName("Herman"));
-
-function findName(name) {
-	return ages.hasOwnProperty(name);
-}
-
-console.log(findName('Spot'));
+console.log(isSpot);
+console.log(findSpot());

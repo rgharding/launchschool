@@ -1,4 +1,9 @@
 let flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"];
-flintstones.push('Dino', 'Hoppy');
+// add 'Dino', 'Hoppy'
 
-console.log(flintstones)
+//flintstones.push('Dino', 'Hoppy');
+
+
+/* flintstones = flintstones.concat('Dino', 'Hoppy')
+console.log(flintstones); */
+

@@ -1,0 +1,23 @@
+{
+  "selectLang": "Please Select Your Language:\nEnglish enter: en\nSpanish enter: es ", 
+  "en": {
+    "welcome": "Welcome to Calculator",
+    "firstNumber": "Enter First Number: ",
+    "secondNumber": "Enter Second Number: ",
+    "notValidNumber": "Please Enter a  Valid Number",
+    "operation": "Enter Operation: \n1: Add\n2: Subtract \n3: Multiply \n4: Divide",
+    "result" : "The result is: ",
+    "continue": "\nContinue enter: 1\n Exit Press Any Other key"
+  },
+
+  "es": {
+    "welcome": "Hola! Welcome to Calculator",
+    "firstNumber": "Hola! Enter First Number: ",
+    "secondNumber": "Hola! Enter Second Number: ",
+    "notValidNumber": "Hola! Please Enter a  Valid Number",
+    "operation": "Hola! Enter Operation: \n1: Add\n2: Subtract \n3: Multiply \n4: Divide",
+    "result" : "Hola! The result is: ",
+    "continue": "Hola! \nContinue enter: 1\n Exit Press Any Other key:"
+  }
+
+}

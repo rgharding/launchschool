@@ -1,6 +1,6 @@
 function stringy(num) {
   let result = ""
-
+  
   for (let i = 1; i <= num; i += 1) {
     if (i % 2 !== 0) {
       result = result + '1';

@@ -1,7 +1,16 @@
-let noun  = prompt('Enter a noun');
-let verb  = prompt('Enter a verb');
-let adjective  = prompt('Enter an adjective');
-let pronoun  = prompt('Enter a pronoun');
+function twice(num) {
+  let numString = String(num);
+  let length = numString.length;
+  let half1 = numString.slice(0, length / 2);
+  let half2 = numString.slice(length/ 2);
 
-console.log(` A weird madlibs sentence using these words ${noun}${verb}${adjective}${pronoun}`);
+  if (half1 === half2) {
+    return num;
+  } else {
+    return num + num;
+  }
+  
+};
 
+
+console.log(twice(7676));

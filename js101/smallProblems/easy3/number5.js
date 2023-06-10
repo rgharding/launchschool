@@ -11,4 +11,5 @@ function triangle(num) {
 }
 
 
-triangle(5);
+triangle(5)
+//This was saved as wrong number

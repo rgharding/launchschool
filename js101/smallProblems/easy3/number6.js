@@ -1,16 +1,7 @@
-function triangle(num) {
-  let space = num - 1;
-  let star = 1;
-  let count = num;
+let noun  = prompt('Enter a noun');
+let verb  = prompt('Enter a verb');
+let adjective  = prompt('Enter an adjective');
+let pronoun  = prompt('Enter a pronoun');
 
-    while (count) {
-      console.log(`${' '.repeat(space)}${'*'.repeat(star)}`)
-      space = space - 1;
-      star = star + 1;
-      count = count - 1
-    }
-    
-}
-
-console.log(triangle(5));
+console.log(` A weird madlibs sentence using these words ${noun}${verb}${adjective}${pronoun}`);
 

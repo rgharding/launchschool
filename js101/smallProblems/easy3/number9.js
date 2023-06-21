@@ -1,28 +1,17 @@
-function cleanUp(str) {
-  let cleanText = '';
+function cleanUpText(str) {
+  let newStr = '';
+  let regex = /[a-z]/i
 
-  for (let i = 0; i < str.length; i += 1) {
-    if (isLowerCase(str[i]) || isUpperCase(str[i]) ) {
-      cleanText += str[i];
-    } else if (i === 0 || lastChar(cleanText) !== " ") {
-      cleanText += ' '
+  for (let index = 0; index < str.length; index += 1) {
+    if ( regex.test(str[index]) ) {
+      newStr += str[index]
+   
+    } else if (index === 0  || newStr[newStr.length - 1] !== " " ){
+      newStr += " ";
     }
   }
-  return cleanText;
-  }
+  return newStr;
+}
 
-  function isLowerCase(letter) {
-    return letter >= 'a' && letter <= 'z';
-  }
-
-  function isUpperCase(letter) {
-    return letter >= 'A' && letter <= 'Z';
-  }
-
-  function lastChar(letter) {
-    return letter[letter.length - 1];
-  }
-
-let x = "---what's my +*& line?" // " what s my line ";
-
-console.log(cleanUp(x));
+let string = "---What's my +*& line?";
+console.log(cleanUpText(string));

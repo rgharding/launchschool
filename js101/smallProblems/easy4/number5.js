@@ -1,26 +1,33 @@
-let sync = require('readline-sync');
-
-let numberArray = [];
-
-let number1 = Number(sync.question('Enter first number: '));
-let number2 = Number(sync.question('Enter second number: '));
-let number3 = Number(sync.question('Enter third number: '));
-let number4 = Number(sync.question('Enter fourth number: '));
-let number5 = Number(sync.question('Enter fifth number: '));
-let numToCheck = Number(sync.question('Enter number to check: '));
-
-numberArray.push(number1, number2, number3, number4, number5);
-
-if (numberArray.includes(numToCheck)) {
-  console.log( `The number ${numToCheck} appears in this list of numbers: ${numberArray} `)
-} else {
-  console.log( `The number ${numToCheck} does NOT appear in this list of numbers: ${numberArray} `)
+function runningTotal(arr) {
+  let newArr = [];
+  
+  for (let i = 0; i < arr.length; i += 1) {
+    if (i === 0) {
+      newArr.push(arr[i]);
+    } else {
+      newArr.push(newArr[i - 1]+ arr[i]);
+    }
+  }
+  return newArr
 }
 
-function checkNumber(arr, num) {
-  let isLarger = (element) => element > num;
-  let result = arr.some(isLarger);
-  console.log(result); 
+
+
+console.log(runningTotal([2, 5, 13]));             // [2, 7, 20]
+console.log(runningTotal([14, 11, 7, 15, 20]));    // [14, 25, 32, 47, 67]
+console.log(runningTotal([3]));                    // [3]
+console.log(runningTotal([]));                     // []
+
+
+function runningTotal2(arr) {
+  let sum = 0;
+  let result = arr.map((element) => {
+    return sum += element;
+  });
+  return result;
 }
 
-checkNumber(numberArray, numToCheck);
+console.log(runningTotal2([2, 5, 13]));             // [2, 7, 20]
+console.log(runningTotal2([14, 11, 7, 15, 20]));    // [14, 25, 32, 47, 67]
+console.log(runningTotal2([3]));                    // [3]
+console.log(runningTotal2([]));                     // []

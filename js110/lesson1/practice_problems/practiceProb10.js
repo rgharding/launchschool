@@ -47,4 +47,12 @@ let sortedYoungest = Object.values(ages).sort((a, b) => {
   return a - b;
 })[0];
 
-console.log(sortedYoungest)
+//console.log(sortedYoungest)
+
+// alternate solution;
+
+let valueArr = Object.values(ages);
+
+let yougestMunster = Math.min(...valueArr);
+console.log(yougestMunster);
+console.log(...valueArr);

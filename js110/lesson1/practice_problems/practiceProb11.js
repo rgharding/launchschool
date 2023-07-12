@@ -50,7 +50,7 @@ stringNoSpaces.forEach((char) => {
 });
 
 
-PACHYDERM
+
 
 console.log(obj);
 

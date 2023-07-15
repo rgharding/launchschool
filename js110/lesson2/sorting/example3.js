@@ -19,5 +19,5 @@ console.log(y) // ['ants', 'arc', 'bat', 'cap', 'cape'];
 
 
     Explanation: 
-      Sort is a DESTRUCTIVE method
+      Sort is a DESTRUCTIVE method. Even though it is returning the results of sort to a new array, the original array is sorted as well
 */

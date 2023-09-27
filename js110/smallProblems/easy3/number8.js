@@ -8,6 +8,8 @@ function removeNonAlpha(str) {
   for (let char of str) {
     if (regex.test(char)) {
       lettersAndSpaces += char
+    } else {
+      lettersAndSpaces += ' '
     }
   }
 
@@ -33,7 +35,15 @@ function removeMultipleSpaces(str) {
 
 function cleanUp(str) {
   let onlyLettersAndSpaces = removeNonAlpha(str);
-  let noMultipleSpaces = removeMultipleSpaces(onlyLettersAndSpaces)
+  let noMultipleSpaces = removeMultipleSpaces(onlyLettersAndSpaces);
+
+  return noMultipleSpaces;
 }
 
-cleanUp("---what's my +*& line");
+console.log(cleanUp("---what's my +*& line"));
+
+
+
+
+
+

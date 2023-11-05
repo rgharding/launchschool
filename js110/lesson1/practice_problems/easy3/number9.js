@@ -73,4 +73,13 @@ function cleanUp(string) {
 }
 
 
-console.log(cleanUp("---what's my +*& line")) // " what s my line"
+// console.log(cleanUp("---what's my +*& line")) // " what s my line"
+
+
+
+function cleanUpRegEx(string) {
+    return string.replace(/[^a-z]/ig, ' ').replace(/\s+/ig, ' ');
+}
+
+
+console.log(cleanUpRegEx("---what's my +*& line")) // " what s my line"

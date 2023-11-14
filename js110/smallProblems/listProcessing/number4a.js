@@ -2,7 +2,7 @@ function leadingSubstrings(str) {
   let strArr = str.split('');
   let subStr = '';
   
-  let subStringArr = strArr.map((element, currentIndex) => {
+  let subStringArr = strArr.map((element) => {
      return subStr += element
   });
 

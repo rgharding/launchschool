@@ -26,4 +26,4 @@ function searchWord2(wordToSearch, text) {
 }
 
 
-console.log(searchWord2('sed', text)); // 3
+console.log(searchWord2('seds', text)); // 3

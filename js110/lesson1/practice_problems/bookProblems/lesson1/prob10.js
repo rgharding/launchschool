@@ -17,3 +17,7 @@ let youngest = Object.values(ages).sort((a, b) => {
   } else return 0
 })[0]
 console.log(youngest);
+
+let agesArr = Object.values(ages)
+let youngestEasier = Math.min(...(Object.values(ages)));
+console.log(youngestEasier)

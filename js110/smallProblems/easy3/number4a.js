@@ -1,6 +1,6 @@
 function triangle(num) {
   for (let i = 1; i <= num; i += 1) {
-    let str = '*'.repeat(i).padStart(num, ' ');
+    let str = '*'.repeat(i).padStart(num);
     console.log(str)
   }
 }

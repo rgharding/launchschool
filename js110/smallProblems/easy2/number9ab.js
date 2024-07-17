@@ -1,6 +1,6 @@
-function age() {
-  let randomAge = Math.round(Math.random() * (120 - 20) + 20);
+function age(low, high) {
+  let randomAge = Math.round(Math.random() * (high - low) + low);
   console.log(`The Teddy bear is ${randomAge} years old.`)
 }
 
-age();
+age(20, 120);

@@ -11,7 +11,6 @@ function count(array, element) {
 
 function findDup(array) {
   return array.find(element => count(array, element) === 2);
-  // 1
 };
 
 console.log(findDup([1, 5, 3, 1]));

@@ -69,9 +69,21 @@ function substrings(str) {
 }
 
 
+//console.log(substrings('abcde'));
 
-console.log(substrings('abcde'));
 
+function substings2(str) {
+  let strArr = []
+  
+  str.split('').map((char, index) => {
+     strArr.push(leadingSubstring(str.slice(index)).join(', '));
+  })
+
+  return strArr;
+}
+
+
+console.log(substings2('abcde'))
 // returns
 // [ "a", "ab", "abc", "abcd", "abcde",
 //   "b", "bc", "bcd", "bcde",

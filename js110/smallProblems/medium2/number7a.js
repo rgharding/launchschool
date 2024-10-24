@@ -12,8 +12,7 @@ function bubbleSort(arr) {
       }
 
       if (leftItem > rightItem) {
-        arr[i] = rightItem;
-        arr[i + 1] = leftItem;
+        [arr[i], arr[i + 1]] = [arr[i+ 1], arr[i]];
         hasBeenSwapped = true; 
       }
     }
@@ -23,9 +22,9 @@ function bubbleSort(arr) {
 };
 
 
-//let array1 = [5, 3, 1];
-//bubbleSort(array1);
-//console.log(array1);    // [3, 5]
+let array1 = [5, 3, 1];
+bubbleSort(array1);
+console.log(array1);    // [3, 5]
 
 //let array2 = [6, 2, 7, 1, 4];
 //bubbleSort(array2);

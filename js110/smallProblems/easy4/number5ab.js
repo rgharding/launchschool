@@ -57,8 +57,8 @@ function runningTotal(arr) {
   let totalArr = [];
 
   for (let i = 0; i < arr.length; i += 1) {
-     
-    totalArr.push(total += arr[i]);
+    total += arr[i];
+    totalArr.push(total);
   }
 
   console.log(totalArr);

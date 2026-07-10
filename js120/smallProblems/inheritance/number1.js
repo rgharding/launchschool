@@ -1,4 +1,4 @@
-// create car and truck class the inherit from vehicle
+// create change code so start engine invokes automaticaly when creating new Truck instatnce
 
 class Vehicle {
   constructor(year) {
@@ -7,11 +7,15 @@ class Vehicle {
 }
 
 
-class Truck extends Vehicle {};
+class Truck extends Vehicle {
+  constructor(year) {
+    super(year);
+    this.startEngine();
+  }
 
-class Car extends Vehicle {};
+  startEngine() {
+    console.log('Ready to go!')
+  }
+}
 
-
-let car  = new Car(2006);
-
-console.log(car.year);
+let truck = new Truck(2006);

@@ -1,15 +1,17 @@
-// create a person class. It should defaul to jonh doe if no name is provided
+/// creat a rename method that renames kitty when invoked
 
+class Cat {
+  constructor(name) {
+    this.name = name
+  }
 
-class Person {
-  constructor(name = 'John Doe') {
-    this.name = name; 
+  rename(newName) {
+    this.name = newName;
   }
 }
 
+let kitty = new Cat('kitty');
+console.log(kitty.name);
 
-let person = new Person('Bob');
-console.log(person.name)
-
-let person2 = new Person();
-console.log(person2.name);
+kitty.rename('Bob');
+console.log(kitty.name);
